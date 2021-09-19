@@ -1,2 +1,29 @@
+print("    *\n   * *\n  *   *\n *     *\n***   ***\n  *   *\n  *   *\n  *****")
 
-print("Hello World! Test from Home")
+print("        *")
+print("       * *")
+print("      *   *")
+print("     *     *")
+print("    *       *")
+print("   *         *")
+print("  *           *")
+print(" *             *")
+print("******      ******")
+print("     *      *")
+print("     *      *")
+print("     *      *")
+print("     *      *")
+print("     ********")
+
+print("    *     " * 2)
+print("   * *    " * 2)
+print("  *   *   " * 2)
+print(" *     *  " * 2)  
+print("***   *** " * 2)
+print("  *   *   " * 2)
+print("  *   *   " * 2)
+print("  *****   " * 2)
+
+
+
+
