@@ -1,31 +1,42 @@
-#SSgt Binod Gurung, Codes for Chapter 2.6.1.9 to 2.6.1.11.  Date: 21 Sept 2021
+#SSgt Binod Gurung, MODULE 3.1 LAB CODES  Date: 21 Sep 2021
+#MODULE 3.1.1.4 Comparision Operators
 
-#MODULE 2.6.1.9 LAB: Simple Input and Output. Evaluating the results of 4 arithmetic operations.
- 
-a = float(input("Enter the first float value: ")) # input a float value for variable a here
-b = float(input("Enter the second float value: "))# input a float value for variable b here
+n = int(input("Enter a numerical value:")) # Input the numerical value to compare.
+print(n >= 100)                            #n is compared to value of n greater OR equals to 100.
 
-print("The sum of the float values is: " + str(a + b)) # output the result of addition here
-print("The difference of the float values is: " + str(a - b)) # output the result of subtraction here
-print("The product of the float values is: " + str(a * b)) # output the result of multiplication here
-print("The Quotient of the float values is: " + str(a / b)) # output the result of division here
-print("\nThat's all, folks!") #\n will start a newline after the print output.
+#MODULE 3.1.1.10 Comparing operators and conditional execution.
 
-#MODULE 2.6.1.10 LAB: Operators and expressions. Evaluate an algebric expression
+flower = input("Enter the best plant Spathiphyllum properly: ")  #Input the flower name.
+if flower == "Spathiphyllum":                                    #Comparing the user's input with Spathiphyllum using If-Else.
+    print('"Yes - Spathiphyllum is the best plant ever!"')
+    if flower == "spathiphyllum": 
+        print('"No, I want a big Spathiphyllum!"')
+else:
+    print("Spathiphyllum! Not", flower )
 
-x = float(input("Enter value for x: ")) #Input user's float value.
-y = 1 / (x + (1/(x + (1/(x + (1/x)))))) # 1/x is represenation of 1/x in algrbric expression.
-print("y =", y)
+#MODULE3.1.1.11 LAB: Essential of the if-else statement. Calculating the tax
 
-#MODULE 2.6.1.11 LAB: Operators and expressions. Evaluate the end time of a period of time.
+income = float(input("Enter the annual income: ")) #User input for the annual income.
+if income <= 85528:                                #if-else condition for annual income more,equal or less than 85,528. 
+    tax = ((18/100)*income)-556.02                 #18% of income - 556.02.
+else:
+    tax = 14839.02 + ((32/100)*(income-85528))     #14839.02 plue 32% of surplus amount from 85528.
+if tax < 0:                                        #if condition for tax less than 0, tax displayed as 0.
+    tax = 0
+tax = round(tax, 0)                                #tax is rounded using round() function.
+print("The tax is:", tax, "thalers")
 
-hour = int(input("Starting time (hours): "))    #Input starting Time in hours.
-mins = int(input("Starting time (minutes): "))  #Input starting Time in Minutes.
-dura = int(input("Event duration (minutes): ")) #Input the event duration in Minutes.
+#MODULE 3.1.1.12 LAB: Essentials of if-elif-else statement. Determining Leap and Common year.
 
-Total_Minutes = (mins + dura)    #Calculates the total time spent in minutes.
-End_Minutes = Total_Minutes % 60 #% 60 calculates the remainder of the minutes.
-hr = hour + (Total_Minutes//60)  #//60 calculates the hour carried over.
-End_hr = hr % 24                 #%24 calculates the 24 hr clock when the hr goes beyound 24.
-
-print("The End time is ",End_hr,":",End_Minutes)
+year = int(input("Enter a year: "))        #Input year.
+if year > 1581:                            #If-else condition to check if the year is in Gregorian calendar.
+    if (year % 4) != 0:                    #Condition to check the year isn't divisible by 4.
+        print(year,"is a Common year.")    
+    elif (year % 100) != 0:                #Condition to check the year isn't divisible by 100.
+        print(year," is a Leap year.")
+    elif (year % 400) != 0:                #Condition to check the year isn't divisible by 400.
+        print(year,"is a Common year.")
+    else:
+        print(year,"is a Leap year.")      #Any other condition, it's a Leap year.     
+else:
+    print(year,"is not within the Gregorian Calendar period.") #This confirms year before 1581 is not in Gregorian calendar.
